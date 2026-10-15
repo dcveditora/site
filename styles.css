@@ -447,10 +447,15 @@ footer {
   pointer-events: none;
 }
 
-.flecha-visor {
+.flecha-visor,
+.cerrar-visor {
+  position: absolute;
+  z-index: 2;
+}
+
+.flecha.visor {
   position: absolute;
   top: 50%;
-  z-index: 2;
   width: 44px;
   height: 44px;
   border: 1px solid #ffffff;
@@ -485,7 +490,6 @@ footer {
 }
 
 .cerrar-visor {
-  position: absolute;
   top: 18px;
   right: 24px;
   border: 0;
@@ -494,6 +498,15 @@ footer {
   cursor: pointer;
   font-size: 36px;
   line-height: 1;
+}
+
+#imagen-ampliada {
+  position: relative;
+  z-index: 1;
+  max-width: min(100%, 1100px);
+  max-height: 85vh;
+  object-fit: contain;
+  pointer-events: none;
 }
 
 @media (max-width: 720px) {
@@ -578,4 +591,4 @@ footer {
     padding: 8px 10px;
     font-size: 12px;
   }
-}
+
