@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DCV Editora ofrece servicios editoriales para dar forma y voz a tus ideas.">
+  <title>DCV Editora — Servicios editoriales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="contenedor barra">
+      <a class="logo" href="#inicio" aria-label="DCV Editora, inicio">
+      <img src="imagenes/LOGO_DCV_black.png" alt="DCV Editora" class="logo-imagen">
+        <span class="logo-texto">
+          DCV EDITORA
+          <small>EDICIÓN · DISEÑO · GESTIÓN CULTURAL</small>
+        </span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <a href="#acerca">Acerca de</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <button class="boton-tema" id="boton-tema" type="button" aria-pressed="false">
+        ◐ Modo oscuro
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="contenedor">
+        <span class="etiqueta">Servicios editoriales</span>
+        <h1>DCV Editora</h1>
+        <p>
+          Acompañamos proyectos editoriales desde la primera idea hasta su
+          publicación.
+        </p>
+        <a class="boton" href="#contacto">Hablemos de tu proyecto</a>
+      </div>
+    </section>
+
+    <section id="acerca">
+      <div class="contenedor encabezado-seccion">
+        <h2>Acerca de</h2>
+        <div class="texto-acerca">
+        <p>
+          Proyecto editorial creado por Daniela Colleoni Villagrán.
+          Formada en Teoría e Historia del Arte por la Universidad
+          de Chile, es investigadora, editora y gestora en el ámbito
+          cultural y patrimonial. Su trayectoria abarca la gestión de
+          archivos y documentación de colecciones patrimoniales,
+          investigación y curatoría, producción editorial de
+          publicaciones impresas y electrónicas, además de la
+          edición de contenidos culturales digitales.</p>
+          <span class="separador-acerca" aria-hidden="true">§</span>
+        <p>
+          DCV EDITORA ofrece un servicio integral para la
+          producción de publicaciones culturales y académicas, con
+          un enfoque transdisciplinar al cuidado de cada detalle en
+          las etapas de edición y corrección de textos,
+          diagramación y diseño editorial, gestión de imprenta y
+          preparación de publicaciones electrónicas.
+        </p>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <h2>Servicios editoriales</h2>
+          <p>
+            Apoyo editorial especializado, desde la planificación inicial hasta los
+            archivos finales listos para publicar.
+          </p>
+        </div>
+
+        <div class="servicios">
+          <article class="servicio">
+            <span class="servicio-numero">01 / TEXTO</span>
+            <h3>Edición y corrección</h3>
+            <p>Edición de estilo, corrección ortotipográfica y revisión de pruebas.</p>
+          </article>
+
+          <article class="servicio">
+            <span class="servicio-numero">02 / DISEÑO</span>
+            <h3>Diseño editorial</h3>
+            <p>Diseño y diagramación de libros, revistas, catálogos y publicaciones.</p>
+          </article>
+
+          <article class="servicio">
+            <span class="servicio-numero">03 / PRODUCCIÓN</span>
+            <h3>Gestión editorial</h3>
+            <p>Planificación, coordinación de procesos y preparación de originales para imprenta o difusión web.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portafolio">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <h2>Portafolio</h2>
+          <p>
+            Una selección de nuestros trabajos editoriales.
+          </p>
+        </div>
+
+      <div class="carrusel-portafolio">
+      <button class="flecha-carrusel anterior" type="button" aria-label="Ver imágenes anteriores">
+      &#10094;
+      </button>
+
+      <div class="portafolio" id="portafolio-carrusel">
+      <button class="obra" type="button" aria-label="Ampliar PT01">
+        <img src="imagenes/PT01.jpg" alt="Acerca de DCV Editora">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT02">
+        <img src="imagenes/PT02.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT03">
+        <img src="imagenes/PT03.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT04">
+        <img src="imagenes/PT04.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT05">
+        <img src="imagenes/PT05.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT06">
+        <img src="imagenes/PT06.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT07">
+        <img src="imagenes/PT07.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT08">
+        <img src="imagenes/PT08.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT09">
+        <img src="imagenes/PT09.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT10">
+        <img src="imagenes/PT10.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT11">
+        <img src="imagenes/PT11.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT12">
+        <img src="imagenes/PT12.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT13">
+        <img src="imagenes/PT13.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT14">
+        <img src="imagenes/PT14.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT15">
+        <img src="imagenes/PT15.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT16">
+        <img src="imagenes/PT16.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT17">
+        <img src="imagenes/PT17.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+
+      </button>      <button class="obra" type="button" aria-label="Ampliar PT18">
+        <img src="imagenes/PT18.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+      <button class="obra" type="button" aria-label="Ampliar PT19">
+        <img src="imagenes/PT19.jpg" alt="">
+        <span>Proyecto editorial 1</span>
+      </button>
+
+       <button class="flecha-carrusel siguiente" type="button" aria-label="Ver imágenes siguientes">
+        &#10095;
+        </button>
+
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="contenedor contacto">
+        <div>
+          <h2>¿Tienes un proyecto en mente?</h2>
+          <p>Cuéntanos qué quieres publicar y trabajemos en ello.</p>
+        </div>
+        <a class="boton" href="mailto:dcveditora@gmail.com">dcveditora@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contenedor pie">
+      <span>© 2026 DCV Editora</span>
+
+      <div class="sociales" aria-label="Redes sociales">
+        <a
+          href="https://www.instagram.com/dcv.editora"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7zm5 3a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6zm0 2.2a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2zm5.1-3.2a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/>
+          </svg>
+        </a>
+
+        <a href="mailto:dcveditora@gmail.com" aria-label="Correo electrónico">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13zM4.2 6l7.8 6 7.8-6H4.2zM20 8.2l-8 6.1-8-6.1v10.3c0 .3.2.5.5.5h15c.3 0 .5-.2.5-.5V8.2z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="visor" id="visor" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+    <button class="cerrar-visor" id="cerrar-visor" type="button" aria-label="Cerrar">×</button>
+    <img id="imagen-ampliada" src="" alt="">
+  </div>
+</body>
+</html>
