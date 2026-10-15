@@ -270,6 +270,7 @@ section {
   padding: 4px 2px 16px;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0;
   scrollbar-width: thin;
 }
 
@@ -330,6 +331,39 @@ section {
 
   .flecha-carrusel.siguiente {
     right: 6px;
+  }
+}
+
+/* Flechas del visor */
+.flecha-visor {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  background: rgb(0 0 0 / 55%);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 22px;
+  transform: translateY(-50%);
+}
+
+.flecha-visor.anterior {
+  left: 20px;
+}
+
+.flecha-visor.siguiente {
+  right: 20px;
+}
+
+@media (max-width: 600px) {
+  .flecha-visor.anterior {
+    left: 8px;
+  }
+
+  .flecha-visor.siguiente {
+    right: 8px;
   }
 }
 
