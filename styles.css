@@ -451,6 +451,31 @@ footer {
 }
 
 @media (max-width: 720px) {
+  .portafolio {
+    display: grid;
+    grid-template-columns: none;
+    grid-auto-columns: 75%;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .obra {
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 460px) {
+  .portafolio {
+    grid-template-columns: none;
+    grid-auto-columns: 85%;
+    grid-auto-flow: column;
+  }
+}
+
+
+@media (max-width: 720px) {
   .contenedor {
     width: min(100% - 32px, 560px);
   }
@@ -502,12 +527,6 @@ footer {
     flex-direction: column;
   }
 }
-
-@media (max-width: 460px) {
-  .servicios,
-  .portafolio {
-    grid-template-columns: 1fr;
-  }
 
   .boton-tema {
     padding: 8px 10px;
