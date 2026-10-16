@@ -8,7 +8,7 @@
   --acento: #315b8a;
 }
 
-[data-tema="oscuro"] {
+html[data-tema="oscuro"] {
   color-scheme: dark;
   --fondo: #171717;
   --texto: #eeeeee;
@@ -39,24 +39,16 @@ a {
   color: inherit;
 }
 
-.logo-imagen {
-  display: block;
-  width: 120px;      /* Ajusta el tamaño según necesites */
-  height: auto;
-  object-fit: contain;
-}
-
-.separador-acerca {
-  display: block;
-  margin: 20px 0;
-  text-align: center;
-  color: var(--texto-suave);
+button {
+  font: inherit;
 }
 
 .contenedor {
   width: min(1120px, calc(100% - 48px));
   margin: 0 auto;
 }
+
+/* Encabezado y navegación */
 
 header {
   border-bottom: 1px solid var(--borde);
@@ -74,20 +66,17 @@ header {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  text-decoration: none;
+  color: inherit;
   font-weight: 800;
   letter-spacing: 0.12em;
+  text-decoration: none;
 }
 
-.logo-simbolo {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  place-items: center;
-  border: 1px solid currentColor;
-  font-family: Georgia, serif;
-  font-size: 21px;
-  letter-spacing: 0;
+.logo-imagen {
+  display: block;
+  width: 120px;
+  height: auto;
+  object-fit: contain;
 }
 
 .logo-texto {
@@ -101,7 +90,7 @@ header {
   color: var(--texto-suave);
   font-size: 10px;
   font-weight: 400;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.12em;
 }
 
 nav {
@@ -120,10 +109,6 @@ nav a:hover,
   color: var(--acento);
 }
 
-button {
-  font: inherit;
-}
-
 .boton-tema {
   padding: 9px 13px;
   border: 1px solid var(--borde);
@@ -137,6 +122,8 @@ button {
 .boton-tema:hover {
   border-color: var(--acento);
 }
+
+/* Portada */
 
 .hero {
   padding: 110px 0 100px;
@@ -160,7 +147,6 @@ p {
 h1 {
   max-width: 850px;
   margin-bottom: 24px;
-  font-family: "Atkinson Hyperlegible Next", sans-serif;
   font-size: clamp(42px, 7vw, 82px);
   font-weight: 400;
   line-height: 1.05;
@@ -178,6 +164,7 @@ h1 {
   display: inline-block;
   padding: 12px 20px;
   border: 1px solid var(--texto);
+  color: var(--texto);
   text-decoration: none;
   transition: background 0.2s ease, color 0.2s ease;
 }
@@ -186,6 +173,8 @@ h1 {
   background: var(--texto);
   color: var(--fondo);
 }
+
+/* Secciones */
 
 section {
   padding: 86px 0;
@@ -201,17 +190,18 @@ section {
 
 .encabezado-seccion h2 {
   margin: 0;
-  font-family: "Atkinson Hyperlegible Next", sans-serif;
   font-size: clamp(34px, 5vw, 52px);
   font-weight: 400;
   line-height: 1.1;
 }
 
-.encabezado-seccion p {
+.encabezado-seccion > p {
   max-width: 580px;
   margin: 8px 0 0;
   color: var(--texto-suave);
 }
+
+/* Acerca de */
 
 #acerca .texto-acerca {
   grid-column: 2;
@@ -223,6 +213,14 @@ section {
   color: var(--texto-suave);
 }
 
+.separador-acerca {
+  display: block;
+  margin: 20px 0;
+  color: var(--texto-suave);
+  text-align: center;
+}
+
+/* Servicios */
 
 .servicios {
   display: grid;
@@ -246,7 +244,6 @@ section {
 
 .servicio h3 {
   margin: 24px 0 10px;
-  font-family: "Atkinson Hyperlegible Next", sans-serif;
   font-size: 23px;
   font-weight: 400;
 }
@@ -256,6 +253,8 @@ section {
   color: var(--texto-suave);
   font-size: 14px;
 }
+
+/* Carrusel del portafolio */
 
 .carrusel-portafolio {
   position: relative;
@@ -270,19 +269,18 @@ section {
   padding: 4px 2px 16px;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  scroll-padding-inline: 0;
   scrollbar-width: thin;
 }
 
 .obra {
   position: relative;
-  overflow: hidden;
   width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
   padding: 0;
   border: 0;
   background: var(--superficie);
   cursor: zoom-in;
-  aspect-ratio: 4 / 3;
   scroll-snap-align: start;
 }
 
@@ -291,6 +289,26 @@ section {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.obra span {
+  display: block;
+  padding: 8px 10px;
+  color: var(--texto);
+  font-size: 13px;
+  text-align: left;
+}
+
+/* Si las etiquetas deben quedar bajo las imágenes, usa este formato
+   y quita aspect-ratio: 4 / 3 de .obra. */
+.obra {
+  display: flex;
+  flex-direction: column;
+}
+
+.obra img {
+  min-height: 0;
+  flex: 1;
 }
 
 .flecha-carrusel {
@@ -320,52 +338,7 @@ section {
   right: -18px;
 }
 
-@media (max-width: 720px) {
-  .portafolio {
-    grid-auto-columns: 75%;
-  }
-
-  .flecha-carrusel.anterior {
-    left: 6px;
-  }
-
-  .flecha-carrusel.siguiente {
-    right: 6px;
-  }
-}
-
-/* Flechas del visor */
-.flecha-visor {
-  position: absolute;
-  top: 50%;
-  width: 44px;
-  height: 44px;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-  background: rgb(0 0 0 / 55%);
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 22px;
-  transform: translateY(-50%);
-}
-
-.flecha-visor.anterior {
-  left: 20px;
-}
-
-.flecha-visor.siguiente {
-  right: 20px;
-}
-
-@media (max-width: 600px) {
-  .flecha-visor.anterior {
-    left: 8px;
-  }
-
-  .flecha-visor.siguiente {
-    right: 8px;
-  }
-}
+/* Contacto y pie de página */
 
 .contacto {
   display: flex;
@@ -376,7 +349,6 @@ section {
 
 .contacto h2 {
   margin-bottom: 10px;
-  font-family: "Atkinson Hyperlegible Next", sans-serif;
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 400;
 }
@@ -417,6 +389,8 @@ footer {
   fill: currentColor;
 }
 
+/* Visor de imágenes */
+
 .visor {
   position: fixed;
   z-index: 10;
@@ -432,13 +406,7 @@ footer {
   display: flex;
 }
 
-.visor img {
-  max-width: min(100%, 1100px);
-  max-height: 85vh;
-  object-fit: contain;
-}
-
-.visor img {
+#imagen-ampliada {
   position: relative;
   z-index: 1;
   max-width: min(100%, 1100px);
@@ -447,14 +415,22 @@ footer {
   pointer-events: none;
 }
 
-.flecha-visor,
 .cerrar-visor {
   position: absolute;
   z-index: 2;
+  top: 18px;
+  right: 24px;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 36px;
+  line-height: 1;
 }
 
-.flecha.visor {
+.flecha-visor {
   position: absolute;
+  z-index: 2;
   top: 50%;
   width: 44px;
   height: 44px;
@@ -475,64 +451,7 @@ footer {
   right: 20px;
 }
 
-.cerrar-visor {
-  z-index: 2;
-}
-
-@media (max-width: 600px) {
-  .flecha-visor.anterior {
-    left: 8px;
-  }
-
-  .flecha-visor.siguiente {
-    right: 8px;
-  }
-}
-
-.cerrar-visor {
-  top: 18px;
-  right: 24px;
-  border: 0;
-  background: transparent;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 36px;
-  line-height: 1;
-}
-
-#imagen-ampliada {
-  position: relative;
-  z-index: 1;
-  max-width: min(100%, 1100px);
-  max-height: 85vh;
-  object-fit: contain;
-  pointer-events: none;
-}
-
-@media (max-width: 720px) {
-  .portafolio {
-    display: grid;
-    grid-template-columns: none;
-    grid-auto-columns: 75%;
-    grid-auto-flow: column;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-
-  .obra {
-    min-width: 0;
-    scroll-snap-align: start;
-  }
-}
-
-@media (max-width: 460px) {
-  .portafolio {
-    grid-template-columns: none;
-    grid-auto-columns: 85%;
-    grid-auto-flow: column;
-  }
-}
-
+/* Diseño adaptable */
 
 @media (max-width: 720px) {
   .contenedor {
@@ -556,6 +475,11 @@ footer {
     font-size: 13px;
   }
 
+  .boton-tema {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
   .hero {
     padding: 76px 0;
   }
@@ -570,14 +494,24 @@ footer {
     margin-bottom: 28px;
   }
 
-  .servicios,
-  .portafolio {
-    grid-template-columns: 1fr 1fr;
+  #acerca .texto-acerca {
+    grid-column: 1;
   }
 
-  .servicio {
-    min-height: 180px;
-    padding: 20px;
+  .servicios {
+    grid-template-columns: 1fr;
+  }
+
+  .portafolio {
+    grid-auto-columns: 75%;
+  }
+
+  .flecha-carrusel.anterior {
+    left: 6px;
+  }
+
+  .flecha-carrusel.siguiente {
+    right: 6px;
   }
 
   .contacto,
@@ -585,10 +519,48 @@ footer {
     align-items: flex-start;
     flex-direction: column;
   }
-}
 
-  .boton-tema {
-    padding: 8px 10px;
-    font-size: 12px;
+  .flecha-visor.anterior {
+    left: 8px;
   }
 
+  .flecha-visor.siguiente {
+    right: 8px;
+  }
+}
+
+@media (max-width: 460px) {
+  .logo-imagen {
+    width: 88px;
+  }
+
+  .logo-texto small {
+    max-width: 190px;
+    font-size: 9px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 18px;
+    row-gap: 8px;
+  }
+
+  .portafolio {
+    grid-auto-columns: 85%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    transition: none;
+  }
+
+  .portafolio {
+    scroll-behavior: auto;
+  }
+}
